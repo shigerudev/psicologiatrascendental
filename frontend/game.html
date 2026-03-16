@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espejo Espiritual — Viaje Trascendental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div class="cosmic-bg">
+        <div class="cosmic-gradient"></div>
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <header class="navbar game-navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Espejo Espiritual</span>
+            </a>
+            <div class="game-progress" id="game-progress" aria-hidden="true">
+                <span id="progress-text">Escena 1 de 14</span>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="game-main">
+        <!-- Pantalla de inicio -->
+        <section id="game-start" class="game-screen active">
+            <div class="container game-container">
+                <div class="game-intro">
+                    <h1>El viaje del espejo</h1>
+                    <p class="game-intro-desc">
+                        Una experiencia de ficción interactiva basada en la Psicología Trascendental de Hugo Arias. 
+                        Tus decisiones revelan tu perfil de expansión de conciencia a través de los 7 constructos.
+                    </p>
+                    <form id="start-form" class="start-form">
+                        <div class="form-group">
+                            <label for="game-type">Tipo de aventura</label>
+                            <select id="game-type" name="gameType">
+                                <option value="fantasy">Fantasía</option>
+                                <option value="slice_of_life">Vida cotidiana</option>
+                                <option value="sci_fi">Ciencia ficción</option>
+                                <option value="mystical">Místico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="game-topic">Tema (opcional)</label>
+                            <input type="text" id="game-topic" name="gameTopic" placeholder="Ej: búsqueda de sentido, sueños, creatividad...">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Iniciar viaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla de juego -->
+        <section id="game-play" class="game-screen">
+            <div class="container game-container">
+                <article class="game-node" id="game-node">
+                    <div class="node-constructo" id="node-constructo"></div>
+                    <div class="node-narrative" id="node-narrative"></div>
+                    <div class="node-choices" id="node-choices">
+                        <button type="button" class="choice-btn choice-a" data-choice="a">
+                            <span class="choice-label">A</span>
+                            <span class="choice-text" id="choice-a-text"></span>
+                        </button>
+                        <button type="button" class="choice-btn choice-b" data-choice="b">
+                            <span class="choice-label">B</span>
+                            <span class="choice-text" id="choice-b-text"></span>
+                        </button>
+                    </div>
+                </article>
+                <div class="game-loading" id="game-loading" aria-hidden="true">
+                    <div class="loading-spinner"></div>
+                    <p>Preparando la siguiente escena...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla de perfil (sesión completada) -->
+        <section id="game-profile" class="game-screen">
+            <div class="container game-container">
+                <div class="profile-result">
+                    <h1>Tu perfil de conciencia</h1>
+                    <p class="profile-desc">Basado en tus decisiones durante el viaje. El Índice de Conciencia Trascendental (ICT) refleja la coherencia entre los 7 constructos.</p>
+                    <div class="ict-display">
+                        <span class="ict-value" id="ict-value">0.00</span>
+                        <span class="ict-label">ICT</span>
+                    </div>
+                    <div class="constructos-chart" id="constructos-chart"></div>
+                    <a href="game.html" class="btn btn-ghost">Nuevo viaje</a>
+                    <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error -->
+        <section id="game-error" class="game-screen">
+            <div class="container game-container">
+                <div class="game-error">
+                    <h2>Algo no ha ido bien</h2>
+                    <p id="error-message">No se pudo conectar con el servidor.</p>
+                    <a href="game.html" class="btn btn-primary">Reintentar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

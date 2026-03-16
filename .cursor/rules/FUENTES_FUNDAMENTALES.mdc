@@ -1,0 +1,24 @@
+---
+description: Usar siempre los tres documentos de investigación como base del proyecto
+globs: 
+alwaysApply: true
+---
+
+# Fuentes Fundamentales — Psicología Trascendental
+
+Al trabajar en este proyecto, **consulta y aplica** los siguientes documentos:
+
+## Documentos Obligatorios
+
+1. **`assets/Psicologia Trascendental_ Hugo Arias.pdf`** — Marco teórico (7 constructos, 5 fases MIT, arquetipos, logoterapia)
+2. **`assets/psychogat.pdf`** — Arquitectura de agentes LLM, gamificación de escalas, métricas psicométricas
+3. **`assets/metodologia-de-la-investigacion-sexta-edicion.compressed.pdf`** — Rigor metodológico (Hernández Sampieri): confiabilidad, validez, operacionalización
+
+## Guía de Uso
+
+- **Constructos y escalas** → Arias + Hernández Sampieri
+- **Agentes y flujo** → PsychoGAT
+- **Validación psicométrica** → PsychoGAT (α, validez) + Hernández Sampieri
+- **Ética y MIT** → Arias
+
+Ver `DOCS/FUNDAMENTAL_SOURCES.md` para detalles completos.
